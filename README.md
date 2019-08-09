@@ -14,5 +14,5 @@ to delete remnants namespaces use -dn:
 `python clean.py clustername accesskey secretkey rancherurl -dn`
 
 
-use option -c clusternameto only do for a certain cluster:
+use option -c clustername to only do for a certain cluster:
 `python clean.py clustername accesskey secretkey rancherurl -c c-asdf2`
