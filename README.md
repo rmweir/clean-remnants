@@ -2,6 +2,8 @@
 1. have python 3
 2. pip install -r requirements.txt
 
+# Before using
+script assumes that namespaces prefixed with "p-" that do not have a matching project are be remannts and will be deleted
 # How to use
 
 to print remnants prtbs and namespaces:
