@@ -51,7 +51,10 @@ for prtb in prtbs:
     if (proj_id not in project_id_set) and (cluster_id == "" or project_to_cluster[proj_id] == cluster_id):
         if delete_prtbs:
             print("deleting prtb:", prtb.id)
-            rclient.delete(prtb)
+            try:
+                rclient.delete(prtb)
+            except:
+                print("failed to delete prtb:", prtb.id)
         else:
             print("remnant prtb:", prtb.id)
 
@@ -70,7 +73,7 @@ for ns in namespaces.items:
                 try:
                     v1.delete_namespace(ns_name)
                 except:
-                    print("didnt delete:", ns_name)
+                    print("failed to delete namespsace:", ns_name)
             else:
                 print("remnant namespace:", ns_name)
 
